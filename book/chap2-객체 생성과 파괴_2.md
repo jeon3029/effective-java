@@ -52,7 +52,27 @@ public enum Elvis {
 
 ## Item4 : 인스턴스화를 막으려거든 Privae 생성자를 사용하라
 
+가끔 정정 메서드와 정적 필드만을 담은 클래스를 만들고 싶을 떄가 있다
+- (예시)
+  - java.lang.Math
+  - java.util.Arrays
+  - java.util.Collections
+
+- 추상 클래스로 만드는 것으로는 인스턴스화를 막을 수 없다.
+  - 하위 클래스를 만들어 인스턴스화 가능
+- private 생성자를 추가하여 인스턴스화를 막는다.
+  - 상속을 불가능하게 한다(명시적이든 묵시적이든 상위 클래스의 생성자를 호출하게 되는데 private 으로 되어있어 막힌다)
+
+```java
+public class UtilityClass {
+    private UtilityClass() {
+        throw new AssertionError();
+    }
+}
+```
+
 ## Item5 : 자원을 직접 명시하지 말고 의존객체 주입을 사용하라
+
 
 ## Item6 : 불필요한 객체 생성을 피하라
 
