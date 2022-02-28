@@ -56,7 +56,7 @@ public static Discount createDisCountProduct(String code){
     }
 }
 class Coupon extends Discount{};
-class Poing extends Discount{};
+class Point extends Discount{};
 //하위 클래스를 노출하지 않고 반환할 수 있다.
 ```
 - Collections 가 45개의 구현체를 제공한다.
@@ -527,9 +527,3 @@ public Object pop() {
   - 이 말인 즉, 그 키 값을 가리키는 참조값이 사라졌을 때를 이야기 한다.
   - 예시 <https://www.baeldung.com/java-weakhashmap>
 
-
-## Item8 : finalizer 와 cleaner 사용을 피하라
-
-## Item9 : try-finally 보다는 try-with-resources 를 사용하라
-
-- 회수가 필요한 리소스를 사용할 때 필수이다(예외는 없다)
